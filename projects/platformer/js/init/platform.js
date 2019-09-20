@@ -37,28 +37,18 @@
         // example:
         platform.create(400, 460);
         platform.create(500, 200);
+        platform.create(20, 50);
+        platfrom.create(320, 390);
         
-        platform.create(x, y, scaleX, scaleY);
+        collectable.creat(type.Tim, 200, 170, 6, 0.7);
+        collectable.creat(type.Carl, 50, 70, 6, 0.7);
+        collectable.creat(type.Mat, 145, 40, 6, 0.7);
+        
+        cannon.create.onTop(450);
+        cannon.create.onBottom(50);
+        cannon.create.onLeft(40);
+        cannon.create.onRight(360); 
  
-            x: The x coordineate for the platform.
-            y: The y coordineate for the platform.
-            scaleX: OPTIONAL The scale factor on the x-axis, this value will stretch the platform in width.
-            scaleY: OPTIONAL The scale factor on the y-axis, this value will stretch the platform in height.
-        
-        collectable.create(type.Tim, 200, 170, 6, .7);
-
-            type: The type of the collectable
-            x: The x coordineate for the collectable.
-            y: The y coordineate for the collectable.
-            gravity: OPTIONAL The gravitational pull on the collectable.
-            bounce: OPTIONAL A factor effecting how much the collectable will bounce off platforms, etc.
-            
-                cannon.create.onTop(450);
-                cannon.create.onBottom(225);
-                cannon.create.onLeft(300);
-                cannon.create.onRight(110); 
-                
-                
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
