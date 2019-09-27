@@ -36,19 +36,10 @@
 
         // example:
         platform.create(400, 460);
-        platform.create(500, 200);
+        platform.create(500, 150);
         platform.create(20, 50);
-        platfrom.create(320, 390);
+        platform.create(320, 580);
         
-        collectable.creat(type.Tim, 200, 170, 6, 0.7);
-        collectable.creat(type.Carl, 50, 70, 6, 0.7);
-        collectable.creat(type.Mat, 145, 40, 6, 0.7);
-        
-        cannon.create.onTop(450);
-        cannon.create.onBottom(50);
-        cannon.create.onLeft(40);
-        cannon.create.onRight(360); 
- 
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
