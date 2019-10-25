@@ -41,17 +41,41 @@
 			var boardWidth = jQuery('.board').width();
 	
 			// TODO 2 - Variable declarations
-			
+			var position = 0; 
+			var points = 0;
+			var speed = 10;
+			var direction = 1;
+
+			box.css('left', position);
+			box.text(points);
 			function update() {
 				// TODO 3 / 6 / 7 / 8
-				
+				position += speed * direction;
+                console.log("new position: " + position);
+                
+                if(position > boardWidth) {
+                    console.log("Right Wall Hit");
+                    direction = -1;
+                    console.log(direction);
+                }
+                if(position < 0) {
+                    console.log("Left Wall Hit");
+                    direction = 1;
+                    console.log(direction);
+                }
+                
+                box.css('left', position);
+                
 			};
 
 
 			
 			function handleBoxClick() {
 				// TODO 4 / 5
-				
+				 points += 1;
+				 box.text(points);
+				 position = 0; 
+				 speed += 3;
 			};
 
 
