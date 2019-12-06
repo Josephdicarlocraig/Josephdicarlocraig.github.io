@@ -26,20 +26,32 @@ var level01 = function (window) {
         game.setDebugMode(true);
 
         // BEGIN EDITING YOUR CODE HERE
-        var hitZoneSize = 25;
-        var damageFromObstacle = 10;
-        var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
+        for (var i = 0; i < levelData.gameItems.length; i++){
+            var gameItem = levelData.gameItems[i];
+        }
         
-        myObstacle.x = 400;
-        myObstacle.y = 375;
+        function createSawBlade(x,y) {
+            var hitZoneSize = 25;
+            var damageFromObstacle = 50;
+            var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
+            
+            myObstacle.x = x;
+            myObstacle.y = y;
+            
+            game.addGameItem(myObstacle);
+            
+            var obstacleImage = draw.bitmap('img/sawblade.png');
+            myObstacle.addChild(obstacleImage);
+            
+            obstacleImage.x = -25;
+            obstacleImage.y = -25;
+        }
+        createSawBlade(400, 369);
+        createSawBlade(600, 280);
+        createSawBlade(800, 390);
+
         
-        game.addGameItem(myObstacle);
-        
-        var obstacleImage = draw.bitmap('img/sawblade.png');
-        myObstacle.addChild(obstacleImage);
-        
-        obstacleImage.x = -25;
-        obstacleImage.y = -25;
+        // ALL CODE ABOVE HERE
     }
 };
 
